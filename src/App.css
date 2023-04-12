@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Josefin Sans", sans-serif, "Courier New", Courier, monospace;
+
+}
+
+:root {
+
+
+  /* Light Theme */
+  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-very-light-grayish-blue: hsl(236, 33%, 92%);
+  --color-light-grayish-blue: hsl(233, 11%, 84%);
+  --color-dark-grayish-blue: hsl(236, 9%, 61%);
+  --color-very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* Dark Theme */
+  --color-very-dark-blue: hsl(235, 21%, 11%);
+  --color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --color-dark-light-grayish-blue: hsl(234, 39%, 85%);
+  --color-dark-light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --color-dark-dark-grayish-blue: hsl(234, 11%, 52%);
+  --color-dark-very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --color-dark-very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
+}
+
+
+
+.App.dark {
+  background-image: url(./archivos/bg-mobile-dark.jpg);
+
+}
+
+
+.App.light {
+  background-image: url(./archivos/bg-mobile-light.jpg);
+
+}
+
+.App {
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.container {
+  height: 100vh;
+}
+
+.container.dark {
+  background-color: var(--color-very-dark-blue);
+  color: var(--color-dark-dark-grayish-blue);
+}
+
+.container.light {
+  background-color: var(--color-very-light-gray);
+  color: var(--color-very-dark-grayish-blue);
+}
+
+header {
+
+  height: 30vh;
+  width: 80vw;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding: 40px 0px;
+
+}
+
+.img {
+  padding-top: 12px;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  width: 26px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  overflow-y: hidden;
+}
+
+h1 {
+  color: white;
+
+}
+
+input {
+  font-size: 18px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.text {
+  height: 50px;
+  width: 100%;
+}
+
+button {
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  height: 50px;
+  cursor: pointer;
+}
+
+.App.dark input {
+  background-color: var(--color-very-dark-desaturated-blue);
+  color: var(--color-dark-dark-grayish-blue);
+}
+
+body {
+  font-size: 18px;
+}
+
+.list {
+
+  position: absolute;
+  top: 19%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  margin-top: 20px;
+  width: 100%;
+  border: solid 1px rgba(128, 128, 128, 0.178);
+  border-radius: 5px;
+  padding: 0;
+}
+
+li {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: solid 1px rgba(128, 128, 128, 0.178);
+  padding: 0 10px;
+
+}
+
+
+.App.light .completed {
+  text-decoration: line-through;
+  color: var(--color-light-grayish-blue);
+}
+
+.App.dark .completed {
+  text-decoration: line-through;
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.App.dark button {
+  color: var(--color-dark-dark-grayish-blue);
+  background-color: var(--color-very-dark-desaturated-blue)
+}
+
+.App.App.light button {
+  color: var(--color-dark-dark-grayish-blue);
+  background-color: white;
+}
+
+.App.dark li {
+  background-color: var(--color-very-dark-desaturated-blue);
+
+}
+
+input:focus {
+  outline: none;
+}
+
+.App.light .filter button {
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.filter {
+
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border: solid 1px rgba(128, 128, 128, 0.178);
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.filter button {
+  width: 33.3%;
+  border-radius: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  padding: 50px;
+}
+
+.check {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  appearance: none;
+  border: 2px solid #888;
+  border-radius: 50%;
+
+}
+
+.check:checked {
+  background-color: rgb(102, 0, 219) !important;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+@media (min-width: 600px) {
+
+
+
+  .list {
+    max-width: 700px;
+  }
+
+  .App.light {
+    background-image: url(./archivos/bg-desktop-light.jpg);
+  }
+
+  .App.dark {
+    background-image: url(./archivos/bg-desktop-dark.jpg);
+  }
+}
